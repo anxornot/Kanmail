@@ -84,6 +84,10 @@ jobs:
           SENTRY_DSN: ${{ secrets.SENTRY_DSN }}
           POSTHOG_API_KEY: ${{ secrets.POSTHOG_API_KEY }}
 
+      # Test the compiled app works properly
+      - name: Test the app
+        run: python3 main.py
+
       # Upload app to S3
       - name: Install AWS CLI
         run: pip3 install awscli
