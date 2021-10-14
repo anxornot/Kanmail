@@ -42,6 +42,8 @@ def monitor_threads(*threads):
             if not thread.is_alive():
                 logger.critical(f'Thread: {thread} died, exiting!')
                 destroy_main_window()
+                server.stop()
+                sys.exit(2)
         else:
             sleep(0.5)
 
@@ -115,4 +117,8 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except Exception:
+        server.stop()
+        raise
