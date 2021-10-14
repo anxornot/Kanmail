@@ -100,8 +100,8 @@ pythonnet==2.5.2
     # via pywebview
 pyupdater==4.0.0
     # via -r .\requirements\base.in
-pywebview==3.4
-    # intentionally broken version
+git+git://github.com/r0x0r/pywebview@0c4d5518d786eb41718725c039670ff0dd219a43
+    # via -r .\requirements\base.in
 pywin32==301 ; platform_system == "Windows"
     # via -r .\requirements\base.in
 pywin32-ctypes==0.2.0
