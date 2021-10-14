@@ -89,6 +89,7 @@ jobs:
       - name: Test the app
         run: python3 main.py
         env:
+          KANMAIL_DEBUG: "on"
           GOOGLE_OAUTH_CLIENT_ID: ${{ secrets.GOOGLE_OAUTH_CLIENT_ID }}
           GOOGLE_OAUTH_CLIENT_SECRET: ${{ secrets.GOOGLE_OAUTH_CLIENT_SECRET }}
           SENTRY_DSN: ${{ secrets.SENTRY_DSN }}
